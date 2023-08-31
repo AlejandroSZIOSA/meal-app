@@ -1,3 +1,5 @@
  ------------ Navigation --------------------
 
- 
+ 1- CATEGORY = constants.
+ 2- Flatlist renders Lazily :)
+ 3 - Scrollview will use It in the flatlist
