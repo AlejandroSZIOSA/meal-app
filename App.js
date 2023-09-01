@@ -12,11 +12,11 @@ const Stack = createNativeStackNavigator(); // An object with properties
 export default function App() {
   return (
     <>
-      <StatusBar style='light'/>
+      <StatusBar style='dark'/>
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen 
-            name='MealCategories'
+            name="MealCategories"
             component={CategoriesScreen}
           />
         </Stack.Navigator>
