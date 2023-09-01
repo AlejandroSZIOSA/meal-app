@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
     shadowOpacity:0.25, //This works in IOS device , a shadow :)
     shadowOffset:{width:0, height:2}, //This works in IOS device , a shadow :)
     shadowRadius:8, //This works in IOS device , a shadow :)
+    overflow: 'hidden', // This fix problem with android_ripple effect
   },
   innerContainer: {
     flex: 1, // It takes all available space
