@@ -1,4 +1,4 @@
-import { Pressable, View, Text, StyleSheet } from "react-native";
+import { Pressable, View, Text, StyleSheet, Platform } from "react-native";
 // This custom component define how an item from the list will look like :)
 // Props comes from the dummy-data
 function CategoryGridTile ({title, color}){
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     shadowOpacity:0.25, //This works in IOS device , a shadow :)
     shadowOffset:{width:0, height:2}, //This works in IOS device , a shadow :)
     shadowRadius:8, //This works in IOS device , a shadow :)
-    overflow: 'hidden', // This fix problem with android_ripple effect
+    overflow: Platform.OS === 'android' ? 'hidden' : 'visible' , // This fix problem with android_ripple effect
   },
   innerContainer: {
     flex: 1, // It takes all available space
