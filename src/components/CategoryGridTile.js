@@ -2,8 +2,9 @@ import { Pressable, View, Text, StyleSheet, Platform } from "react-native";
 // This custom component define how an item from the list will look like :)
 // Props comes from the dummy-data
 function CategoryGridTile ({title, color}){
-  return( 
-    <View style={styles.gridItem}>
+  return(
+    //Destructuring background colors :)
+    <View style={[styles.gridItem,{backgroundColor: color}]}>
       <Pressable 
         android_ripple={{color:'#ccc'}}
         //Destructuring + condition "pressed" :)
