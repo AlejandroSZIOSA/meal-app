@@ -3,3 +3,5 @@
  1- CATEGORY = constants.
  2- Flatlist renders Lazily :)
  3 - Scrollview will use It in the flatlist
+ 4- sudo npm install @react-navigation/native
+ 5- sudo expo install react-native-screens react-native-safe-area-context
