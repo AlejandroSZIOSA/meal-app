@@ -3,16 +3,15 @@ import { Pressable, View, Text, StyleSheet, Platform } from "react-native";
 // Props comes from the dummy-data
 function CategoryGridTile ({title, color}){
   return(
-    //Destructuring background colors :)
-    <View style={[styles.gridItem,{backgroundColor: color}]}>
+    <View style={styles.gridItem}>
       <Pressable 
         android_ripple={{color:'#ccc'}}
         //Destructuring + condition "pressed" :)
         style={({pressed})=>[
           styles.button, 
           pressed ? styles.buttonPressed : null, ]}>
-        
-          <View style={styles.innerContainer}>
+            {/** Destructuring background colors :) */}
+          <View style={[styles.innerContainer,{backgroundColor: color}]}>
             <Text style={styles.title}>{title}</Text>
           </View>
       </Pressable>
@@ -41,6 +40,7 @@ const styles = StyleSheet.create({
     padding: 16,
     justifyContent: 'center',
     alignItems: 'center',
+    borderRadius: 8, // fix a problem with corners
   },
   button: {
     flex: 1,
