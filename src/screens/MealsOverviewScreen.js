@@ -1,4 +1,4 @@
-import { View, StyleSheet} from "react-native";
+import { View, StyleSheet,Text} from "react-native";
 import { MEALS } from "../data/dummy-data";
 
 function MealsOverviewScreen(){
