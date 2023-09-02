@@ -18,12 +18,12 @@ export default function App() {
         <Stack.Navigator>
           <Stack.Screen 
             name="MealCategories"
-            // connect the screen Component to Stack Navigator
+            //Connecting the screen Component to Stack Navigator
             component={CategoriesScreen}
           />
           <Stack.Screen 
             name="MealOverview"
-            //connecting another screen Component to Stack Navigator
+            //Connecting another screen Component to Stack Navigator
             component={MealsOverviewScreen}
           />
         </Stack.Navigator>

@@ -1,7 +1,8 @@
 import { Pressable, View, Text, StyleSheet, Platform } from "react-native";
 // This custom component define how an item from the list will look like :)
 // Props comes from the dummy-data
-function CategoryGridTile ({title, color}){
+// onPress prop is a pointer how trigger when pressable is enabled
+function CategoryGridTile ({title, color, onPress}){
   return(
     <View style={styles.gridItem}>
       <Pressable 
@@ -9,11 +10,14 @@ function CategoryGridTile ({title, color}){
         //Destructuring + condition "pressed" :)
         style={({pressed})=>[
           styles.button, 
-          pressed ? styles.buttonPressed : null, ]}>
-            {/** Destructuring background colors :) */}
-          <View style={[styles.innerContainer,{backgroundColor: color}]}>
-            <Text style={styles.title}>{title}</Text>
-          </View>
+          pressed ? styles.buttonPressed : null, ]}
+        //trigger when pressable is enabled
+        onPress={onPress}  
+      >
+        {/** Destructuring background colors :) */}
+        <View style={[styles.innerContainer,{backgroundColor: color}]}>
+          <Text style={styles.title}>{title}</Text>
+        </View>
       </Pressable>
     </View>
   )
