@@ -6,6 +6,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 
 import CategoriesScreen from './src/screens/CategoriesScreen';
+import MealsOverviewScreen from './src/screens/MealsOverviewScreen';
 
 const Stack = createNativeStackNavigator(); // An object with properties
 
@@ -17,8 +18,13 @@ export default function App() {
         <Stack.Navigator>
           <Stack.Screen 
             name="MealCategories"
-            //the Component
+            // connect the screen Component to Stack Navigator
             component={CategoriesScreen}
+          />
+          <Stack.Screen 
+            name="MealOverview"
+            //connecting another screen Component to Stack Navigator
+            component={MealsOverviewScreen}
           />
         </Stack.Navigator>
       </NavigationContainer>
