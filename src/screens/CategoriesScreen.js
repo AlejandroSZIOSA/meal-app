@@ -3,8 +3,6 @@ import { CATEGORIES } from "../data/dummy-data";
 import CategoryGridTile from "../components/CategoryGridTile";
 
 //The form of how the item will renders :)
-
-
 //Using destructing Navigation Special Prop :)
 //Changing the position of the functions, the objective is all functions get access to the Navigation Prop
 function CategoriesScreen({navigation}){
