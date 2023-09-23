@@ -9,6 +9,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 
 
 import CategoriesScreen from './src/screens/CategoriesScreen';
+import MealsOverviewScreen from './src/screens/MealsOverviewScreen';
 
 // Create a Navigation Obj
 const Stack = createStackNavigator();
@@ -22,6 +23,7 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="MealsCategories" component={CategoriesScreen}/>
+          <Stack.Screen name="MealsOverview" component={MealsOverviewScreen}/>
         </Stack.Navigator>
       </NavigationContainer>
     </>
