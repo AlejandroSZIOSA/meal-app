@@ -6,16 +6,20 @@ import CategoryGridTile from "../components/CategoryGridTile";
 
 
 //Using destructing Navigation Special Prop :)
-//Changing the position of the functions
+//Changing the position of the functions, the objective is all functions get access to the Navigation Prop
 function CategoriesScreen({navigation}){
+
   function renderCategoryItem(itemData){
+
     function pressHandler(){
+      navigation.navigate("MealsOverview");
     }
+
     return (
       <CategoryGridTile 
         title={itemData.item.title} 
         color={itemData.item.color}
-        
+        //Navigate between Screens :)
         onPress={pressHandler}
       />
     )
