@@ -10,6 +10,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 
 import CategoriesScreen from './src/screens/CategoriesScreen';
 import MealsOverviewScreen from './src/screens/MealsOverviewScreen';
+import DefaultScreen from './src/screens/DefaultScreen';
 
 // Create a Navigation Obj
 const Stack = createStackNavigator();
