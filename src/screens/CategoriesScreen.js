@@ -3,16 +3,23 @@ import { CATEGORIES } from "../data/dummy-data";
 import CategoryGridTile from "../components/CategoryGridTile";
 
 //The form of how the item will renders :)
-function renderCategoryItem(itemData){
-  return (
-    <CategoryGridTile 
-      title={itemData.item.title} 
-      color={itemData.item.color}
-    />
-  )
-}
 
-function CategoriesScreen(){
+
+//Using destructing Navigation Special Prop :)
+//Changing the position of the functions
+function CategoriesScreen({navigation}){
+  function renderCategoryItem(itemData){
+    function pressHandler(){
+    }
+    return (
+      <CategoryGridTile 
+        title={itemData.item.title} 
+        color={itemData.item.color}
+        
+        onPress={pressHandler}
+      />
+    )
+  }
 
   return (
   <FlatList 
