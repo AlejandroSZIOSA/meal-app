@@ -5,7 +5,7 @@ import CategoryGridTile from "../components/CategoryGridTile";
 //The form of how the item will renders :)
 //Using destructing Navigation Special Prop :)
 //Changing the position of the functions, the objective is all functions get access to the Navigation Prop
-//ALT: Can use useNavigation Hook to use in a unregister Screen:)
+//ALT: Can use useNavigation Hook for use it in an unregister Screen or nested components :)
 
 function CategoriesScreen({navigation}){
 
