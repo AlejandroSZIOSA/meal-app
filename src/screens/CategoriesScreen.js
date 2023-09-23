@@ -5,11 +5,15 @@ import CategoryGridTile from "../components/CategoryGridTile";
 //The form of how the item will renders :)
 //Using destructing Navigation Special Prop :)
 //Changing the position of the functions, the objective is all functions get access to the Navigation Prop
+//ALT: Can use useNavigation Hook to use in a unregister Screen:)
+
 function CategoriesScreen({navigation}){
 
   function renderCategoryItem(itemData){
     function pressHandler(){
-      navigation.navigate("MealsOverview");
+      navigation.navigate("MealsOverview", {
+        categoryId: itemData.item.id,
+      });
     }
     return (
       <CategoryGridTile 
