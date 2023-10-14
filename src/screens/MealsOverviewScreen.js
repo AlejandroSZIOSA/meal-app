@@ -17,11 +17,22 @@ function MealsOverviewScreen({route}){
 
   //Create a function that is connected to yhe flatlist and call a Component
   function renderMealItem(itemData){
+
+    // help constant
+    const item= itemData.item;
+
+    const mealItemProps = {
+      title: item.title,
+      imageUrl: item.imageUrl,
+      affordability: item.affordability,
+      complexity: item.complexity,
+      duration: item.duration,
+    }
+
     // Passing Props to the MealItem component
     return (
-      <MealItem 
-        title={itemData.item.title} 
-        imageUrl={itemData.item.imageUrl}
+      // Passing multiple Props as once
+      <MealItem {...mealItemProps}
       />
     )
   }
