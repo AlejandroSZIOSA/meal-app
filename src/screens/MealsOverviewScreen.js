@@ -31,7 +31,7 @@ function MealsOverviewScreen({route}){
 
     // Passing Props to the MealItem component
     return (
-      // Passing multiple Props as once
+      // Passing multiple Props as once :)
       <MealItem {...mealItemProps}
       />
     )
