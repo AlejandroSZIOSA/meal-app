@@ -30,8 +30,9 @@ function MealsOverviewScreen({route,navigation}){
   function renderMealItem(itemData){
     // help constant
     const item= itemData.item;
-    
+
     const mealItemProps = {
+      id: item.id,
       title: item.title,
       imageUrl: item.imageUrl,
       affordability: item.affordability,
