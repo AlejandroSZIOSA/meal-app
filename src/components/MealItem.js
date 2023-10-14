@@ -27,6 +27,11 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     overflow: 'hidden',
     backgroundColor:'white',
+    elevation: 4, //for android devices
+    shadowColor: 'black', //This works in IOS device , a shadow :)
+    shadowOpacity:0.25, //This works in IOS device , a shadow :)
+    shadowOffset:{width:0, height:2}, //This works in IOS device , a shadow :)
+    shadowRadius:8, //This works in IOS device , a shadow :)
   },
 
   image: {
