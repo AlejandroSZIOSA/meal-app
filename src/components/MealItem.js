@@ -1,4 +1,4 @@
-import { View,Pressable,Text, Image, StyleSheet } from "react-native";
+import { View,Pressable,Text, Image, StyleSheet,Platform } from "react-native";
 
 function MealItem ({title, imageUrl, duration,complexity, affordability}){
   return(
@@ -25,13 +25,13 @@ const styles = StyleSheet.create({
   mealItem:{
     margin:16,
     borderRadius: 8,
-    overflow: 'hidden',
+    overflow: Platform.OS === 'android' ? 'hidden' : 'visible' , // This fix problem with android_ripple effect
     backgroundColor:'white',
     elevation: 4, //for android devices
     shadowColor: 'black', //This works in IOS device , a shadow :)
-    shadowOpacity:0.25, //This works in IOS device , a shadow :)
+    shadowOpacity:0.35, //This works in IOS device , a shadow :)
     shadowOffset:{width:0, height:2}, //This works in IOS device , a shadow :)
-    shadowRadius:8, //This works in IOS device , a shadow :)
+    shadowRadius:16, //This works in IOS device , a shadow :)
   },
 
   image: {
@@ -57,5 +57,4 @@ const styles = StyleSheet.create({
     marginHorizontal:4,
     fontSize: 12,
   },
-
 })
