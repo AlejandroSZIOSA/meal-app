@@ -8,6 +8,12 @@ function MealsOverviewScreen({route}){
   //Using the object :)
   const catId = route.params.categoryId;
 
+  const displayMeals = MEALS.filter( (mealItem) => { 
+    // indexOf = -1 if there are not category
+    return mealItem.categoryId.indexOf(catId) >= 0;
+  });
+
+  
   return(
     <View style={styles.container}>
       <Text> Meals Overview Screen - {catId}</Text>
