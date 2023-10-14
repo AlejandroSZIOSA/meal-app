@@ -3,7 +3,12 @@ import { View,Pressable,Text, Image, StyleSheet,Platform } from "react-native";
 function MealItem ({title, imageUrl, duration,complexity, affordability}){
   return(
     <View style={styles.mealItem}>
-      <Pressable>
+      <Pressable 
+        // Ripple effect on Android Devices
+        android_ripple={{color:'#ccc'}}
+        // Opacity effect on iOS devices
+        style={({pressed})=>(pressed ? styles.buttonPressed : null)}
+        >
         <View style={styles.innerContainer}>
           <View>
             <Image source ={{uri: imageUrl}} style={styles.image}/>
@@ -63,5 +68,9 @@ const styles = StyleSheet.create({
   detailItem:{
     marginHorizontal:4,
     fontSize: 12,
+  },
+
+  buttonPressed:{
+    opacity: 0.5,
   },
 })
