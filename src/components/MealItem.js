@@ -1,4 +1,5 @@
 import { View,Pressable,Text, Image, StyleSheet,Platform } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 function MealItem ({title, imageUrl, duration,complexity, affordability}){
   return(

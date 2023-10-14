@@ -10,6 +10,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 
 import CategoriesScreen from './src/screens/CategoriesScreen';
 import MealsOverviewScreen from './src/screens/MealsOverviewScreen';
+import MealDetailScreen from './src/screens/MealDetailScreen';
 
 // Create a Navigation Obj
 const Stack = createStackNavigator();
@@ -45,6 +46,7 @@ export default function App() {
 
             // }}
           />
+          <Stack.Screen name="MealDetail" component={MealDetailScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
