@@ -37,13 +37,13 @@ export default function App() {
             name="MealsOverview" 
             component={MealsOverviewScreen}
             // Passing dynamic params
-            options={({route,navigation})=>{
-              const catId=route.params.categoryId;
-              return{
-                title:catId,
-              };
+            // options={({route,navigation})=>{
+            //   const catId=route.params.categoryId;
+            //   return{
+            //     title:catId,
+            //   };
 
-            }}
+            // }}
           />
         </Stack.Navigator>
       </NavigationContainer>
