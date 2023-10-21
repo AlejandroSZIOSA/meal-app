@@ -2,6 +2,8 @@ import { View,Text,Image, StyleSheet } from "react-native";
 
 import { MEALS } from "../data/dummy-data";
 import MealDetails from "../components/MealDetails";
+import Subtitle from "../components/MealDetail/Subtitle";
+import List from "../components/MealDetail/List";
 
 
 function MealDetailScreen ({route}){
@@ -20,19 +22,18 @@ function MealDetailScreen ({route}){
         textStyle={styles.detailText}
       />
 
-      <View style={styles.subtitleContainer}>
-        <Text style={styles.subtitle}>Ingredients</Text>
-      </View>
-      {selectedMeal.ingredients.map((ingredient)=>(
+      {/* Reusable code  */}
+      <Subtitle>ingredients</Subtitle>
 
-        <Text key = {ingredient}>{ingredient}</Text>
-      ))}
-      <View style={styles.subtitleContainer}>
-        <Text style={styles.subtitle}>Steps</Text>
-      </View>
-      {selectedMeal.steps.map((step)=>( 
-      <Text key = {step}>{step}</Text>
-      ))}
+      {/* Reusable code with a list :)  */}
+      <List data={selectedMeal.ingredients}/>
+
+      {/* Reusable code  */}
+      <Subtitle>Steps</Subtitle>
+
+      {/* Reusable code with a list :)  */}
+      <List data={selectedMeal.steps}/>
+
     </View>
   )
 }
@@ -53,20 +54,6 @@ const styles = StyleSheet.create({
   detailText:{
     color:'green',
     fontSize:18,
-  },
-  subtitle:{
-    color:'grey',
-    fontSize: 18,
-    fontWeight: 'bold',
-    textAlign:'center',
-    
-  },
-  subtitleContainer:{
-    padding:4,
-    marginHorizontal:24,
-    marginVertical:4,
-    borderBottomColor:'black',
-    borderBottomWidth: 2,
   },
 
 });
