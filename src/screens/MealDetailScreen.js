@@ -12,7 +12,7 @@ function MealDetailScreen ({route}){
   const selectedMeal = MEALS.find((meal)=> meal.id === mealId);
 
   return(
-    <View>
+    <View >
       <Image style={styles.image} source={{uri: selectedMeal.imageUrl}}/>
       <Text style={styles.title}> {selectedMeal.title}</Text>
       <MealDetails 
@@ -21,19 +21,18 @@ function MealDetailScreen ({route}){
         affordability={selectedMeal.affordability}
         textStyle={styles.detailText}
       />
-
-      {/* Reusable code  */}
-      <Subtitle>ingredients</Subtitle>
-
-      {/* Reusable code with a list :)  */}
-      <List data={selectedMeal.ingredients}/>
-
-      {/* Reusable code  */}
-      <Subtitle>Steps</Subtitle>
-
-      {/* Reusable code with a list :)  */}
-      <List data={selectedMeal.steps}/>
-
+      <View style={styles.listOuterContainer}>
+        <View style={styles.listContainer}>
+          {/* Reusable code  */}
+          <Subtitle>ingredients</Subtitle>
+          {/* Reusable code with a list :)  */}
+          <List data={selectedMeal.ingredients}/>
+          {/* Reusable code  */}
+          <Subtitle>Steps</Subtitle>
+          {/* Reusable code with a list :)  */}
+          <List data={selectedMeal.steps}/>
+        </View>
+      </View>
     </View>
   )
 }
@@ -54,6 +53,14 @@ const styles = StyleSheet.create({
   detailText:{
     color:'green',
     fontSize:18,
+  },
+
+  listOuterContainer:{
+    alignItems:'center',
+  },
+
+  listContainer:{
+    width:'80%',
   },
 
 });
