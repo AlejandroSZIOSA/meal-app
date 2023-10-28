@@ -18,12 +18,19 @@ function MealDetailScreen ({route, navigation}){
     console.log('Pressed')
   }
 
-
+  //Settings Favorite icons :) 
   useLayoutEffect(() => {
     // setOptions from navigation
     navigation.setOptions({
       headerRight: ()=>{
-      return <IconButton setOptions={headerButtonPressHandler} />
+        return( 
+          // using props 
+          <IconButton 
+            icon ="star" 
+            color ="white" 
+            onPress={headerButtonPressHandler} 
+          />
+        )
       }
     });
   },[navigation,headerButtonPressHandler]);
